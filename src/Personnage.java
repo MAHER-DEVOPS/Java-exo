@@ -1,5 +1,6 @@
 public class Personnage {
     private String nom;
+
     private String type;
     private int niveauDeVie;
     private int forceAttaque;
@@ -9,25 +10,46 @@ public class Personnage {
     public Personnage() {
     }
 
-    public Personnage(String Nom) {
-        this.nom = Nom;
+    public Personnage(String nom) {
+
+        this.nom = nom;
     }
+
+
+    public Personnage(String nom, String type) {
+        this.nom = nom;
+        this.type = type;
+
+
+    }
+
+
 
     public String getNom() {
         return nom;
     }
 
-    public Personnage(String Nom, String Type) {
-        this.type = Type;
-
-    }
-
-    public String gettype() {
+    public String getType() {
         return type;
     }
 
+    public int getNiveauDeVie() {
+        return niveauDeVie;
+    }
 
+    public int getForceAttaque() {
+        return forceAttaque;
+    }
+
+    public String getEquipementOffensif() {
+        return EquipementOffensif;
+    }
+
+    public String getEquipementDefensif() {
+        return EquipementDefensif;
+    }
 }
+
 //   public Personnage (String Nom ,
 //                       String EquipementDefensif,
 //                       String EquipementOffensif,
