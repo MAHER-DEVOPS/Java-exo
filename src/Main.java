@@ -1,9 +1,10 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-    Menu players = new Menu();
-    players.menu();
+    Menu menu = new Menu();
+    //void = menu.showMainMenu();
+    Personnage personnage = menu.createPersonnage();
+
+
 
 
     }
@@ -11,26 +12,6 @@ public class Main {
 
 }
 
-//    public static void main(String[] args) {
-//
-//        Personnage guerrier = new Personnage(
-//                "fighter",
-//                "arme",
-//                "bouclier",
-//                10,
-//                10
-//                );
-//        System.out.println(guerrier.getEquipementDefensif());
-//
-//        Personnage magicien = new Personnage(
-//           "magic",
-//                "sort",
-//                "philtre",
-//                6,
-//                15
-//        );
-//
-//    }
 
 
 //    Scanner myObj = new Scanner(System.in);

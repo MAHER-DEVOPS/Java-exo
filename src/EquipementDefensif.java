@@ -1,5 +1,5 @@
 public class EquipementDefensif {
-    private String type;
+    private String equipementDefensif;
     private int niveauDefense;
     private String nom;
 
@@ -10,17 +10,17 @@ public class EquipementDefensif {
 
 
 
-    public EquipementDefensif(String type, int niveauDefense, String nom) {
+    public EquipementDefensif(String equipementDefensif, int niveauDefense, String nom) {
 
-        this.type = type;
+        this.equipementDefensif = equipementDefensif;
         this.nom = nom;
         this.niveauDefense = niveauDefense;
 
 
     }
 
-    public String getType() {
-        return type;
+    public String getEquipementDefensif() {
+        return equipementDefensif;
     }
 
     public int getNiveauDefense() {
@@ -30,4 +30,10 @@ public class EquipementDefensif {
     public String getNom() {
         return nom;
     }
+
+    @Override
+    public String toString() {
+        return "EquipementDefensif [equipementDefensif=" + equipementDefensif + ", niveauDefense=" + niveauDefense + ", nom=" + nom + "]";
+    }
+
 }

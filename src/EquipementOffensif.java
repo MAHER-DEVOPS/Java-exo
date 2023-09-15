@@ -1,19 +1,19 @@
 public class EquipementOffensif {
-    private String type;
+    private String equipementOffensif ;
     private int niveauAttaque;
     private String nom;
 
-    public EquipementOffensif(String type, int niveauAttaque, String nom) {
+    public EquipementOffensif(String equipementOffensif, int niveauAttaque, String nom) {
 
-        this.type = type;
+        this.equipementOffensif = equipementOffensif;
         this.nom = nom;
         this.niveauAttaque = niveauAttaque;
 
 
     }
 
-    public String getType() {
-        return type;
+    public String getEquipementOffensif() {
+        return equipementOffensif;
     }
 
     public int getNiveauAttaque() {
@@ -24,6 +24,10 @@ public class EquipementOffensif {
         return nom;
     }
 
+    @Override
+    public String toString() {
+        return "EquipementOffensif [equipementOffensif =" + equipementOffensif + ", niveauAttaque=" + niveauAttaque + ", nom=" + nom + "]";
+    }
 }
 
 
