@@ -26,17 +26,28 @@ public class Personnage {
     }
 
     public Personnage(String type ,String nom, int niveauDeVie, int forceAttaque, String equipementOffensif,String equipementDefensif ) {
-        this.nom = nom;
-        this.type = type;
-        this.niveauDeVie = niveauDeVie;
-        this.forceAttaque = forceAttaque;
-    this.equipementOffensif = equipementOffensif;
-  this.equipementDefensif = equipementDefensif;
-    }
 
+        if (type.equals("magicien")) {
+            this.nom = nom;
+
+            this.type = type;
+            this.niveauDeVie = niveauDeVie;
+            this.forceAttaque = forceAttaque;
+            this.equipementOffensif = equipementOffensif;
+            this.equipementDefensif = equipementDefensif;
+        } else if (type.equals("guerrier")) {
+            this.nom = nom;
+            this.type = type;
+            this.niveauDeVie = niveauDeVie;
+            this.forceAttaque = forceAttaque;
+            this.equipementOffensif = equipementOffensif;
+            this.equipementDefensif = equipementDefensif;
+        }
+    }
     public String getNom() {
         return nom;
     }
+
 
     public String getType() {
         return type;
@@ -117,7 +128,9 @@ public class Personnage {
 //
 //    }
 //
-//
+//    //String nom = "blabla";
+//    Personnage pop = new Personnage();
+//    this.nom = "popi";
 //
 //    public int getNiveauDvie() {
 //        return niveauDvie;
