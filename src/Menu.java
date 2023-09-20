@@ -17,6 +17,7 @@ public class Menu {
             System.out.println("Choisissez un nouveau nom pour update your personnage");
             perso = updatePersonnage();
         } else if (answer.equals("play")) {
+            System.out.println("start - Démarrer la partie");
           playGame();
         } else if (answer.equals("exit")) {
             exit();
@@ -27,6 +28,11 @@ public class Menu {
         }
         return perso;
 
+    }
+    public void playGame() {
+        System.out.println("Démarrage de la partie...");
+        Game game = new Game();
+        game.startGame();
     }
 
     public void exit() {
@@ -228,11 +234,6 @@ public class Menu {
 
     }
 
-
-
-    public void playGame() {
-
-    }
 }
 
 

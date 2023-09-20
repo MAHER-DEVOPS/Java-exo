@@ -8,14 +8,12 @@ public class Personnage {
     private String equipementDefensif;
 
     public Personnage() {
-//        nom = "toto";
 
-//        this("toto");
     }
 
     public Personnage(String nom) {
         this.nom = nom;
-        //this(nom, "default");
+
     }
 
 
