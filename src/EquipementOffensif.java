@@ -1,4 +1,4 @@
-public class EquipementOffensif {
+public abstract class EquipementOffensif {
     private String equipementOffensif ;
     private int niveauAttaque;
     private String nom;

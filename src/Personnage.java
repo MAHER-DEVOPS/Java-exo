@@ -1,4 +1,4 @@
-public class Personnage {
+public  class Personnage {
     private String nom;
 
     private String type;
@@ -110,47 +110,6 @@ public class Personnage {
                 + ", EquipementOffensif=" + equipementOffensif + ", EquipementDefensif=" + equipementDefensif + "]";
     }
 }
-
-//   public Personnage (String Nom ,
-//                       String EquipementDefensif,
-//                       String EquipementOffensif,
-//                       int NiveauDvie,
-//                       int ForceAttaque){
-//
-//        this.nom = Nom;
-//        this.niveauDvie = NiveauDvie;
-//        this.forceAttaque = ForceAttaque;
-//        this.equipementDefensif = EquipementDefensif;
-//        this.equipementOffensif = EquipementOffensif;
-//
-//
-//    }
-//
-//    //String nom = "blabla";
-//    Personnage pop = new Personnage();
-//    this.nom = "popi";
-//
-//    public int getNiveauDvie() {
-//        return niveauDvie;
-//    }
-//
-//    public String getNom() {
-//        return nom;
-//    }
-//
-//    public int getForceAttaque() {
-//        return forceAttaque;
-//    }
-//
-//    public String getEquipementOffensif() {
-//        return equipementOffensif;
-//    }
-//
-//    public String getEquipementDefensif() {
-//        return equipementDefensif;
-//    }
-
-
 
 
 

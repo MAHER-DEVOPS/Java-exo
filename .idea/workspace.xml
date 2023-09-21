@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="307398fa-1afd-4e0f-b843-20718b5a5d5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Arme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bouclier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Guerrier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Magicien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Philtre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EquipementDefensif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EquipementDefensif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EquipementOffensif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EquipementOffensif.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
@@ -79,11 +87,23 @@
       <workItem from="1694761686952" duration="22219000" />
       <workItem from="1695020835381" duration="20114000" />
       <workItem from="1695109616144" duration="21719000" />
-      <workItem from="1695193446764" duration="8940000" />
+      <workItem from="1695193446764" duration="9797000" />
+      <workItem from="1695279605276" duration="18468000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

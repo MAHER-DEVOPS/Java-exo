@@ -5,30 +5,6 @@ import java.util.Scanner;
 public class Menu {
     private final Scanner scan = new Scanner(System.in);
 
-    public Personnage showMainMenu() {
-
-        System.out.println("Vous voulez create 'personnage' , update 'personnage' , play , exit,  le jeu ");
-        String answer = scan.nextLine();
-        Personnage perso = null;
-        if (answer.equals("create")) {
-             perso = createPersonnage();
-
-        } else if (answer.equals("update")) {
-            System.out.println("Choisissez un nouveau nom pour update your personnage");
-            perso = updatePersonnage();
-        } else if (answer.equals("play")) {
-            System.out.println("start - Démarrer la partie");
-          playGame();
-        } else if (answer.equals("exit")) {
-            exit();
-        }
-        else{
-            System.out.println("Merci de choisir parmis create , update , play ou exit le jeu ");
-            showMainMenu();
-        }
-        return perso;
-
-    }
     public void playGame() {
         System.out.println("Démarrage de la partie...");
         Game game = new Game();
@@ -40,11 +16,33 @@ public class Menu {
 
     }
 
+    // Single responsibility
+//    public void showInfos( Personnage personnage ){
+//        System.out.println("Les Info Par defaut du Votre sont " + personnage.toString() );
+//    }
+
+
+    public Personnage ShowInfo() {
+        String typeChoice = askType();
+        Personnage perso = null;
+        if (typeChoice.equals("guerrier")) {
+            perso = new Guerrier("guerrier", "fighter", 10, 10, "arme", "bouclier");
+            System.out.println("Les Info Par defaut du Votre sont " + typeChoice + "/" + perso);
+
+
+        } else if (typeChoice.equals("magicien")) {
+            perso = new Magicien("magicien", "defender", 6, 15, "sort", "philtre");
+            System.out.println("Les Info Par defaut du Votre sont " + typeChoice + "/" + perso);
+
+        }
+        return perso;
+    }
+
     public Personnage createPersonnage() {
 
         String typeChoice = null;
         while (typeChoice == null) {
-            typeChoice = askType(scan);
+            typeChoice = askType();
         }
 
         int forceAttaque = getForceAttaque(typeChoice);
@@ -53,7 +51,7 @@ public class Menu {
 
         String nomChoice = null;
         while (nomChoice == null) {
-            nomChoice = Asknom(scan);
+            nomChoice = Asknom();
         }
 
         String attaque = null;
@@ -65,7 +63,7 @@ public class Menu {
         while (defence == null) {
             defence = askDefence(typeChoice);
         }
-        System.out.println("Votre " + typeChoice  + " est pret à jouer");
+        System.out.println("Votre " + typeChoice + "/" + nomChoice + " est pret à jouer");
         return (new Personnage(typeChoice, nomChoice, niveauDeVie, forceAttaque, attaque, defence));
 
 
@@ -100,8 +98,8 @@ public class Menu {
         return niveauDeVie;
     }
 
-    public String askType(Scanner scan) {
-        System.out.println("Quel type de personnage voulez-vous créer? magicien || guerrier");
+    public String askType() {
+        System.out.println("Quel type de personnage voulez-vous choisir? magicien || guerrier");
         String typeChoice = scan.nextLine();
         if (typeChoice.equals("guerrier")) {
             typeChoice = "guerrier";
@@ -115,7 +113,7 @@ public class Menu {
         return typeChoice;
     }
 
-    public String Asknom(Scanner scan) {
+    public String Asknom() {
         System.out.println("Quel est le nom de personnage voulez-vous utiliser ?");
         String nomChoice = scan.nextLine();
 
@@ -124,7 +122,7 @@ public class Menu {
 
         } else if (nomChoice.isEmpty()) {
             nomChoice = "toto";
-            System.out.println("Votre nom par defaut est " + nomChoice);
+            System.out.println("Votre nom est " + nomChoice);
         } else {
             nomChoice = null;
 
@@ -133,7 +131,6 @@ public class Menu {
         }
         return nomChoice;
     }
-
 
 
     public String askArm(String typeChoice) {
@@ -151,7 +148,6 @@ public class Menu {
     }
 
     public String askDefence(String typeChoice) {
-
         String defence = scan.nextLine();
         if (typeChoice.equals("magicien")) {
             defence = "philtre";
@@ -167,7 +163,7 @@ public class Menu {
     public Personnage updatePersonnage() {
 
 
-        String typeChoice = askType(scan);
+        String typeChoice = askType();
         int forceAttaque = getForceAttaque(typeChoice);
         int niveauDeVie = getNiveauVie(typeChoice);
         String defence = askDefence(typeChoice);
@@ -181,17 +177,17 @@ public class Menu {
 
             System.out.println("Type : " + typeChoice);
             System.out.println("Nom :" + nomupdate);
-            System.out.println("Niveau de vie :" + niveauDeVie );
-            System.out.println("Force Attaque :" + forceAttaque );
+            System.out.println("Niveau de vie :" + niveauDeVie);
+            System.out.println("Force Attaque :" + forceAttaque);
             System.out.println("EquipementOffensif :" + attaque);
             System.out.println("EquipementDefensif : " + defence);
             //String nextChoice = scan.nextLine();
         } else if (typeChoice.equals("guerrier")) {
             System.out.println("Type " + typeChoice);
             System.out.println("Nom :" + nomupdate);
-            System.out.println("Niveau de vie :" + niveauDeVie );
-            System.out.println("Force Attaque :" + forceAttaque );
-            System.out.println("EquipementOffensif :"+ attaque);
+            System.out.println("Niveau de vie :" + niveauDeVie);
+            System.out.println("Force Attaque :" + forceAttaque);
+            System.out.println("EquipementOffensif :" + attaque);
             System.out.println("EquipementDefensif : " + defence);
         }
         System.out.println("Voulez vous Update votre personnage ? oui | non ");
@@ -202,17 +198,17 @@ public class Menu {
             //updatenom(scan);
             System.out.println("Type " + typeChoice);
             System.out.println("Nom :" + nomupdate);
-            System.out.println("Niveau de vie :" + niveauDeVie );
-            System.out.println("Force Attaque :" + forceAttaque );
-            System.out.println("EquipementOffensif :"+ attaque);
+            System.out.println("Niveau de vie :" + niveauDeVie);
+            System.out.println("Force Attaque :" + forceAttaque);
+            System.out.println("EquipementOffensif :" + attaque);
             System.out.println("EquipementDefensif : " + defence);
         }
-        System.out.println("Votre " + typeChoice  + " est pret à jouer");
+        System.out.println("Votre " + typeChoice + nomupdate + " est pret à jouer");
         return (new Personnage(typeChoice, nomupdate, niveauDeVie, forceAttaque, attaque, defence));
 
 
-
     }
+
     public String updatenom(Scanner scan) {
         System.out.println("Quel est le nom de personnage voulez-vous utiliser ?");
         String nomupdate = scan.nextLine();
@@ -235,47 +231,3 @@ public class Menu {
     }
 
 }
-
-
-
-
-
-
-//    public String askArm(Scanner scan) {
-//        System.out.println("Quel est votre EquipementOffensif ? arme || sort");
-//        String attaque = scan.nextLine();
-//
-//        if (attaque.equals("sort")) {
-//            attaque = "sort";
-//            System.out.println("Votre EquipementOffensif est " + attaque);
-//        } else if (attaque.equals("arme")) {
-//            attaque = "arme";
-//            System.out.println("Votre EquipementOffensif est " + attaque);
-//        } else {
-//            attaque = null;
-//
-//            System.out.println("Votre EquipementOffensif est non défini");
-//
-//        }
-//        return attaque;
-//    }
-
-//    public String askDefence(Scanner scan) {
-//        System.out.println("Quel est votre EquipementDefensif ? bouclier || philtre");
-//        String defence = scan.nextLine();
-//        if (defence.equals("bouclier")) {
-//            defence = "bouclier";
-//            System.out.println("Votre EquipementDefensif est " + defence);
-//        } else if (defence.equals("philtre")) {
-//            defence = "philtre";
-//            System.out.println("Votre EquipementDefensif est " + defence);
-//        } else {
-//            defence = null;
-//
-//            System.out.println("Votre EquipementDefensif est non défini");
-//
-//        }
-//        return defence;
-//    }
-
-//}
