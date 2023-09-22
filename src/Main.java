@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
     Menu menu = new Menu();
+    menu.createPersonnage();
     //Personnage mainMenu = menu.showMainMenu();
 //    Magicien magicien = new Magicien("magicien" ,"defender", 6, 15, "sort","philtre");
 //
@@ -9,8 +10,7 @@ public class Main {
         Game game = new Game();
         game.Choice();
 
-//    String color = "red";
-//        System.out.println(color);
+
         }
 
     }

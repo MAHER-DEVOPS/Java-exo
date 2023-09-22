@@ -1,4 +1,4 @@
-public  class Personnage {
+public  abstract class Personnage {
     private String nom;
 
     private String type;
@@ -58,18 +58,6 @@ public  class Personnage {
     public int getForceAttaque() {
         return forceAttaque;
     }
-
-//    public EquipementOffensif getEquipementOffensif() {
-//        return equipementOffensif;
-//    }
-
-//    public void setEquipementOffensif(EquipementOffensif equipementOffensif) {
-//        this.equipementOffensif = equipementOffensif;
-//    }
-//
-//    public void setEquipementDefensif(EquipementDefensif equipementDefensif) {
-//        this.equipementDefensif = equipementDefensif;
-//    }
 
 
     public String getEquipementOffensif() {

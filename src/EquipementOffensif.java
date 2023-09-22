@@ -1,7 +1,7 @@
 public abstract class EquipementOffensif {
-    private String equipementOffensif ;
-    private int niveauAttaque;
-    private String nom;
+    protected String equipementOffensif ;
+    protected int niveauAttaque;
+    protected String nom;
 
     public EquipementOffensif(String equipementOffensif, int niveauAttaque, String nom) {
 

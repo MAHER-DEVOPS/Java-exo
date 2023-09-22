@@ -1,7 +1,7 @@
 public abstract class EquipementDefensif {
-    private String equipementDefensif;
-    private int niveauDefense;
-    private String nom;
+    protected String equipementDefensif;
+    protected int niveauDefense;
+    protected String nom;
 
 
 
@@ -18,6 +18,8 @@ public abstract class EquipementDefensif {
 
 
     }
+
+   abstract void showEquipementinfo();
 
     public String getEquipementDefensif() {
         return equipementDefensif;

@@ -16,29 +16,30 @@ public class Menu {
 
     }
 
-    // Single responsibility
-//    public void showInfos( Personnage personnage ){
-//        System.out.println("Les Info Par defaut du Votre sont " + personnage.toString() );
-//    }
-
-
+    /**
+     *
+     * @return Quelque chose
+     */
     public Personnage ShowInfo() {
         String typeChoice = askType();
         Personnage perso = null;
         if (typeChoice.equals("guerrier")) {
             perso = new Guerrier("guerrier", "fighter", 10, 10, "arme", "bouclier");
-            System.out.println("Les Info Par defaut du Votre sont " + typeChoice + "/" + perso);
+            System.out.println("Les Info Par defaut du Votre " + typeChoice + " sont " + perso);
 
 
         } else if (typeChoice.equals("magicien")) {
             perso = new Magicien("magicien", "defender", 6, 15, "sort", "philtre");
-            System.out.println("Les Info Par defaut du Votre sont " + typeChoice + "/" + perso);
+            System.out.println("Les Info Par defaut du Votre " + typeChoice + " sont " + perso);
 
         }
         return perso;
     }
 
-    public Personnage createPersonnage() {
+    /**
+     *
+     */
+    public void createPersonnage() {
 
         String typeChoice = null;
         while (typeChoice == null) {
@@ -50,8 +51,19 @@ public class Menu {
         int niveauDeVie = getNiveauVie(typeChoice);
 
         String nomChoice = null;
-        while (nomChoice == null) {
-            nomChoice = Asknom();
+        while (nomChoice == null || nomChoice.isEmpty()) {
+            ExceptionHandling ex = new ExceptionHandling("Nom cannot be empty");
+            try {
+                nomChoice = Asknom();
+                if (nomChoice.isEmpty()){
+
+                    throw ex;
+                }
+            } catch (ExceptionHandling e){ // object e / FOR ALL KIND OF EXCEPTIONS . EXCEPTION PARENT / but it is slower
+                System.err.println("Invalide input for nom " + e.getMessage());
+                e.printStackTrace(); //the problem is in which line
+            }
+
         }
 
         String attaque = null;
@@ -64,11 +76,16 @@ public class Menu {
             defence = askDefence(typeChoice);
         }
         System.out.println("Votre " + typeChoice + "/" + nomChoice + " est pret à jouer");
-        return (new Personnage(typeChoice, nomChoice, niveauDeVie, forceAttaque, attaque, defence));
+        //return (new Personnage(typeChoice, nomChoice, niveauDeVie, forceAttaque, attaque, defence));
 
 
     }
 
+    /**
+     *
+     * @param typeChoice Est un String
+     * @return un entier
+     */
     public int getForceAttaque(String typeChoice) {
 
         int forceAttaque;
@@ -84,6 +101,11 @@ public class Menu {
         return forceAttaque;
     }
 
+    /**
+     *
+     * @param typeChoice
+     * @return Entier
+     */
     public int getNiveauVie(String typeChoice) {
         int niveauDeVie;
         if (typeChoice.contains("guerrier")) {
@@ -160,7 +182,7 @@ public class Menu {
     }
 
 
-    public Personnage updatePersonnage() {
+    public void updatePersonnage() {
 
 
         String typeChoice = askType();
@@ -204,7 +226,7 @@ public class Menu {
             System.out.println("EquipementDefensif : " + defence);
         }
         System.out.println("Votre " + typeChoice + nomupdate + " est pret à jouer");
-        return (new Personnage(typeChoice, nomupdate, niveauDeVie, forceAttaque, attaque, defence));
+        //return (new Personnage(typeChoice, nomupdate, niveauDeVie, forceAttaque, attaque, defence));
 
 
     }
