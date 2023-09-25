@@ -7,7 +7,7 @@ public class Menu {
 
     public void playGame() {
         System.out.println("Démarrage de la partie...");
-        Game game = new Game();
+        Game game = new Game(this);
         game.startGame();
     }
 
@@ -20,16 +20,16 @@ public class Menu {
      *
      * @return Quelque chose
      */
-    public Personnage ShowInfo() {
+    public Personnage showInfo() {
         String typeChoice = askType();
         Personnage perso = null;
         if (typeChoice.equals("guerrier")) {
-            perso = new Guerrier("guerrier", "fighter", 10, 10, "arme", "bouclier");
+            perso = new Guerrier();
             System.out.println("Les Info Par defaut du Votre " + typeChoice + " sont " + perso);
 
 
         } else if (typeChoice.equals("magicien")) {
-            perso = new Magicien("magicien", "defender", 6, 15, "sort", "philtre");
+            perso = new Magicien();
             System.out.println("Les Info Par defaut du Votre " + typeChoice + " sont " + perso);
 
         }
@@ -52,18 +52,27 @@ public class Menu {
 
         String nomChoice = null;
         while (nomChoice == null || nomChoice.isEmpty()) {
-            ExceptionHandling ex = new ExceptionHandling("Nom cannot be empty");
+//            ExceptionHandling ex = new ExceptionHandling();
+//            try {
+//                nomChoice = Asknom();
+//                if (nomChoice.isEmpty()){
+//
+//                    throw ex;
+//                }
+//            } catch (ExceptionHandling e){ // object e / FOR ALL KIND OF EXCEPTIONS . EXCEPTION PARENT / but it is slower
+//                System.err.println("Invalide input for nom " + e.getMessage());
+//                e.printStackTrace(); //the problem is in which line
+//            }
+
             try {
-                nomChoice = Asknom();
-                if (nomChoice.isEmpty()){
-
-                    throw ex;
-                }
-            } catch (ExceptionHandling e){ // object e / FOR ALL KIND OF EXCEPTIONS . EXCEPTION PARENT / but it is slower
+                nomChoice = asknom();
+            } catch (ExceptionHandling e) {
+                //System.out.println("not valid");
                 System.err.println("Invalide input for nom " + e.getMessage());
-                e.printStackTrace(); //the problem is in which line
+            //    e.printStackTrace();
+                nomChoice="toto";
+                System.out.println("Votre nom par defaut est " + nomChoice);
             }
-
         }
 
         String attaque = null;
@@ -80,7 +89,27 @@ public class Menu {
 
 
     }
+    public String asknom() throws ExceptionHandling {
+        System.out.println("Quel est le nom de personnage voulez-vous utiliser ?");
+        String nomChoice = scan.nextLine();
 
+        if (!nomChoice.isEmpty()) {
+            System.out.println("Le nom choisi est " + nomChoice);
+        }
+        else {
+            throw new ExceptionHandling();
+        }
+//        } else if (nomChoice.isEmpty()) {
+//            nomChoice = "toto";
+//            System.out.println("Votre nom est " + nomChoice);
+//        } else {
+//            nomChoice = null;
+//
+//            System.out.println("Votre Personnage nom est non défini");
+//
+//        }
+        return nomChoice;
+    }
     /**
      *
      * @param typeChoice Est un String
@@ -135,24 +164,7 @@ public class Menu {
         return typeChoice;
     }
 
-    public String Asknom() {
-        System.out.println("Quel est le nom de personnage voulez-vous utiliser ?");
-        String nomChoice = scan.nextLine();
 
-        if (!nomChoice.isEmpty()) {
-            System.out.println("Le nom choisi est " + nomChoice);
-
-        } else if (nomChoice.isEmpty()) {
-            nomChoice = "toto";
-            System.out.println("Votre nom est " + nomChoice);
-        } else {
-            nomChoice = null;
-
-            System.out.println("Votre Personnage nom est non défini");
-
-        }
-        return nomChoice;
-    }
 
 
     public String askArm(String typeChoice) {

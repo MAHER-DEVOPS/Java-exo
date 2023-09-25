@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
     Menu menu = new Menu();
     menu.createPersonnage();
     //Personnage mainMenu = menu.showMainMenu();
@@ -7,8 +8,8 @@ public class Main {
 //
 //    Guerrier guerrier = new Guerrier("guerrier" ,"fighter", 10, 10, "arme","bouclier");
       //  System.out.println("Démarrage de la partie...");
-        Game game = new Game();
-        game.Choice();
+        Game game = new Game(menu);
+        game.choice();
 
 
         }

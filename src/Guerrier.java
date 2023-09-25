@@ -1,7 +1,10 @@
 public class Guerrier extends Personnage{
 
-    public Guerrier (String type ,String nom, int niveauDeVie, int forceAttaque, String equipementOffensif,String equipementDefensif) {
-        super(type, nom, niveauDeVie, forceAttaque, equipementOffensif, equipementDefensif);
+    public Guerrier(){
+        this("fighter");
+    }
+    public Guerrier (String nom) {
+        super("guerrier", nom, 10, 10, "arme", "bouclier");
 
 
     }

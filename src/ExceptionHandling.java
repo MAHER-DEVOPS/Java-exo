@@ -1,8 +1,6 @@
 public class ExceptionHandling extends Exception{
-    ExceptionHandling(String msg){
-        super(msg);
+    public ExceptionHandling(){
+        super("You did not set the name so you will get the default name");
     }
-//    ExceptionHandling(){
-//        super();
-//    }
+
 }

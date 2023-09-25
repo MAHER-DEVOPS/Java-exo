@@ -1,8 +1,11 @@
 public class Magicien extends Personnage {
 
+    public Magicien(){
+        this("defender");
+    }
 
-    public Magicien (String type ,String nom, int niveauDeVie, int forceAttaque, String equipementOffensif,String equipementDefensif) {
-            super(type, nom, niveauDeVie, forceAttaque, equipementOffensif, equipementDefensif);
+    public Magicien (String nom) {
+            super("magicien", nom, 6, 15, "sort", "philtre");
 
 
     }
