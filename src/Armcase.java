@@ -12,4 +12,9 @@ public class Armcase implements Case{
         return ("Arme : " + nom + " Bonus Attaque : " + bonusAttaque );
     }
 
+    @Override
+    public void interactPlayer(Personnage personnage) {
+        System.out.println("Cette case est vide, persronne peut passer");
+    }
+
 }

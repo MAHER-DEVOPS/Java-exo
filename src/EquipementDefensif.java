@@ -4,12 +4,6 @@ public abstract class EquipementDefensif {
     protected String nom;
 
 
-
-
-
-
-
-
     public EquipementDefensif(String equipementDefensif, int niveauDefense, String nom) {
 
         this.equipementDefensif = equipementDefensif;
@@ -19,7 +13,8 @@ public abstract class EquipementDefensif {
 
     }
 
-   abstract void showEquipementinfo();
+
+    public abstract void showEquipementinfo();
 
     public String getEquipementDefensif() {
         return equipementDefensif;

@@ -2,7 +2,7 @@
  * Cette class représente une personne avec un nom, type (magicien ou guerrier), niveau de vie, force attaque,
  * equipement offencif et equipement defensif
  */
-public  abstract class Personnage {
+public abstract class Personnage {
     private String nom;
 
     private String type;
@@ -13,29 +13,31 @@ public  abstract class Personnage {
 
 
     /**
-     *  Constructeur pour créer une nouvelle instance de Personnage.
+     * Constructeur pour créer une nouvelle instance de Personnage.
      */
     public Personnage() {
-this ("","");
+        this("");
     }
 
 
     /**
      * Constructeur pour créer une nouvelle instance de Personnage.
+     *
      * @param nom
      */
     public Personnage(String nom) {
-     //   this.nom = nom;
-this (nom,"");
+        //   this.nom = nom;
+        this(nom, "");
     }
 
     /**
      * Constructeur pour créer une nouvelle instance de Personnage.
-     * @param nom nom de la personne
+     *
+     * @param nom  nom de la personne
      * @param type soit magicien ou guerrier
      */
     public Personnage(String nom, String type) {
-        this(type, nom, 10,2,"", "");
+        this(type, nom, 10, 2, "", "");
 //        this.nom = nom;
 //        this.type = type;
         //this(nom, type ); //this() for constructeurs , this.() for attributes
@@ -43,16 +45,16 @@ this (nom,"");
 
     /**
      * Constructeur pour créer une nouvelle instance de Personnage.
-     * @param type de la personne soit guerrier, soit magicien
-     * @param nom de la personne
-     * @param niveauDeVie de la personne
-     * @param forceAttaque de la personne
+     *
+     * @param type               de la personne soit guerrier, soit magicien
+     * @param nom                de la personne
+     * @param niveauDeVie        de la personne
+     * @param forceAttaque       de la personne
      * @param equipementOffensif de la personne soit arme ou sort et ça depend le type de la personne
      * @param equipementDefensif de la personne soit bouclier ou philtre et ça depend le type de la personne
      */
-    public Personnage(String type ,String nom, int niveauDeVie, int forceAttaque, String equipementOffensif,String equipementDefensif ) {
+    public Personnage(String type, String nom, int niveauDeVie, int forceAttaque, String equipementOffensif, String equipementDefensif) {
 
-//        if (type.equals("magicien")) {
         this.type = type;
         this.nom = nom;
         this.niveauDeVie = niveauDeVie;
@@ -60,19 +62,11 @@ this (nom,"");
         this.equipementOffensif = equipementOffensif;
         this.equipementDefensif = equipementDefensif;
     }
-//        } else if (type.equals("guerrier")) {
-//            this.nom = nom;
-//            this.type = type;
-//            this.niveauDeVie = niveauDeVie;
-//            this.forceAttaque = forceAttaque;
-//            this.equipementOffensif = equipementOffensif;
-//            this.equipementDefensif = equipementDefensif;
-//        }
-   // }
 
 
     /**
      * Obtient le nom de la personne
+     *
      * @return Le nom de la personne
      */
     public String getNom() {
@@ -81,7 +75,8 @@ this (nom,"");
 
     /**
      * Obtient le type de la personne
-     * @return  le type de la personne
+     *
+     * @return le type de la personne
      */
     public String getType() {
         return type;
@@ -89,6 +84,7 @@ this (nom,"");
 
     /**
      * Obtient le niveau De vie de la personne
+     *
      * @return le niveau De vie de la personne
      */
     public int getNiveauDeVie() {
@@ -97,6 +93,7 @@ this (nom,"");
 
     /**
      * Obtient la force Attaque de la personne
+     *
      * @return la force attaque de la personne
      */
     public int getForceAttaque() {
@@ -105,6 +102,7 @@ this (nom,"");
 
     /**
      * Obtient la force Attaque de la personne
+     *
      * @return la force Attaque de la personne
      */
     public String getEquipementOffensif() {
@@ -113,6 +111,7 @@ this (nom,"");
 
     /**
      * setter which sets the equipementOffiensif
+     *
      * @param equipementOffensif to be set
      */
     public void setEquipementOffensif(String equipementOffensif) {
@@ -121,6 +120,7 @@ this (nom,"");
 
     /**
      * Obtient l'equipement defensif de la personne
+     *
      * @return l'equipement defensif de la personne
      */
     public String getEquipementDefensif() {
@@ -129,6 +129,7 @@ this (nom,"");
 
     /**
      * setter which sets the equipement Defensif
+     *
      * @param equipementDefensif to be set
      */
     public void setEquipementDefensif(String equipementDefensif) {
@@ -137,6 +138,7 @@ this (nom,"");
 
     /**
      * setter which sets the nom
+     *
      * @param nom to be set
      */
     public void setNom(String nom) {
@@ -145,6 +147,7 @@ this (nom,"");
 
     /**
      * setter which sets the type
+     *
      * @param type to be set
      */
     public void setType(String type) {
@@ -153,6 +156,7 @@ this (nom,"");
 
     /**
      * setter which sets the niveau de vie of the personne
+     *
      * @param niveauDeVie to be set
      */
     public void setNiveauDeVie(int niveauDeVie) {
@@ -161,6 +165,7 @@ this (nom,"");
 
     /**
      * setter which sets the force Attaque of the personne
+     *
      * @param forceAttaque to be set
      */
     public void setForceAttaque(int forceAttaque) {
@@ -169,6 +174,7 @@ this (nom,"");
 
     /**
      * For Return a string representation of the personne
+     *
      * @return Return a string representation of the personne attr
      */
     @Override
