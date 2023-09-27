@@ -172,6 +172,21 @@ public abstract class Personnage {
         this.forceAttaque = forceAttaque;
     }
 
+
+    public void subirDegats(int damage){
+        niveauDeVie -= damage;
+        if (niveauDeVie<=0){
+            System.out.println(nom + " est mort");
+        }
+
+    }
+
+    public void attaquer (Personnage cible){
+        int damage = getForceAttaque();
+        cible.subirDegats(damage);
+        System.out.println(getNom() + "attaque" + cible.getNom() + "pour" + damage + " point de dégats");
+    }
+
     /**
      * For Return a string representation of the personne
      *

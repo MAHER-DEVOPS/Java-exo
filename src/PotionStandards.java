@@ -15,7 +15,9 @@ public PotionStandards () {
 
     @Override
     public void interactPlayer(Personnage personnage) {
-
+int potionBonus = 10;
+    personnage.setNiveauDeVie(personnage.getNiveauDeVie() + potionBonus);
+        System.out.println(personnage.getNom() + "il a bu potion Standard et récupéré de la vie");
     }
     @Override
     public String toString() {

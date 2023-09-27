@@ -14,7 +14,14 @@ public class Armcase implements Case{
 
     @Override
     public void interactPlayer(Personnage personnage) {
-        System.out.println("Cette case est vide, persronne peut passer");
+        if (personnage instanceof Guerrier) {
+            Guerrier guerrier = (Guerrier) personnage;
+            guerrier.setEquipementOffensif(("arme"));
+            System.out.println(guerrier.getNom() + " a trouvé une arme");
+
+        }else if (personnage instanceof Magicien){
+            System.out.println(personnage.getNom() + "il peut pas ramasser d'arme");
+        }
     }
 
 }

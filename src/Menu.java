@@ -67,9 +67,9 @@ public class Menu {
             try {
                 nomChoice = asknom();
             } catch (ExceptionHandling e) {
-                //System.out.println("not valid");
+
                 System.err.println("Invalide input for nom " + e.getMessage());
-            //    e.printStackTrace();
+                e.printStackTrace();
                 nomChoice="toto";
                 System.out.println("Votre nom par defaut est " + nomChoice);
             }
@@ -110,11 +110,7 @@ public class Menu {
 //        }
         return nomChoice;
     }
-    /**
-     *
-     * @param typeChoice Est un String
-     * @return un entier
-     */
+
     public int getForceAttaque(String typeChoice) {
 
         int forceAttaque;
@@ -130,11 +126,6 @@ public class Menu {
         return forceAttaque;
     }
 
-    /**
-     *
-     * @param typeChoice
-     * @return Entier
-     */
     public int getNiveauVie(String typeChoice) {
         int niveauDeVie;
         if (typeChoice.contains("guerrier")) {

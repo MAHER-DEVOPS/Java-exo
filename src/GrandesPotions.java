@@ -11,6 +11,9 @@ public GrandesPotions(){
 
     @Override
     public void interactPlayer(Personnage personnage) {
+    int grandPotionBonus = 40;
+    personnage.setNiveauDeVie(personnage.getNiveauDeVie() + grandPotionBonus);
+        System.out.println(personnage.getNom() + "il a récupéré beaucoup de vie ");
 
     }
 

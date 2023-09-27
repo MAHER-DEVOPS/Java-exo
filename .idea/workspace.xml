@@ -7,13 +7,14 @@
     <list default="true" id="307398fa-1afd-4e0f-b843-20718b5a5d5c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Armcase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Armcase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bouclier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bouclier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Case.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Case.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EquipementDefensif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EquipementDefensif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ennemi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ennemi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Guerrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Guerrier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GrandesPotions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GrandesPotions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mausse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mausse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personnage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Philtre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Philtre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Potion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PotionStandards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PotionStandards.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +91,8 @@
       <workItem from="1695279605276" duration="19172000" />
       <workItem from="1695366479027" duration="15146000" />
       <workItem from="1695627297377" duration="19120000" />
-      <workItem from="1695715871231" duration="13347000" />
+      <workItem from="1695715871231" duration="13413000" />
+      <workItem from="1695802145366" duration="13484000" />
     </task>
     <servers />
   </component>
